@@ -8,14 +8,22 @@
     <style>
         body {
             font-family: 'Ubuntu', sans-serif;
+            text-align: center; /* Center all text in the body */
+        }
+        h1 {
+            color: #4d4d4d;
         }
         input::placeholder {
             font-style: italic;
+        }
+        img {
+            margin-top: 10px; /* Add some space between the title and the logo */
         }
     </style>
 </head>
 <body>
     <h1>Telegram User Checker</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" width="100">
     <form id="checkForm">
         <label for="phone_numbers">Phone Numbers (comma-separated):</label><br>
         <input type="text" id="phone_numbers" name="phone_numbers" placeholder="Enter Phone Numbers"><br>
