@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram User Checker</title>
+</head>
+<body>
+    <h1>Telegram User Checker</h1>
+    <form id="checkForm">
+        <label for="phone_numbers">Phone Numbers (comma-separated):</label><br>
+        <input type="text" id="phone_numbers" name="phone_numbers"><br>
+        <label for="api_id">API ID:</label><br>
+        <input type="text" id="api_id" name="api_id"><br>
+        <label for="api_hash">API Hash:</label><br>
+        <input type="password" id="api_hash" name="api_hash"><br>
+        <label for="api_phone_number">Your Telegram Phone Number:</label><br>
+        <input type="text" id="api_phone_number" name="api_phone_number"><br><br>
+        <button type="button" onclick="checkNumbers()">Check</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        function checkNumbers() {
+            var form = document.getElementById("checkForm");
+            var formData = new FormData(form);
+
+            fetch('/check', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultsDiv = document.getElementById("results");
+                resultsDiv.innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
+
