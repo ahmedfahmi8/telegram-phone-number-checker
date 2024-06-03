@@ -18,9 +18,9 @@ You can also install it and run it directly from GitHub as a script.
 git clone https://github.com/bellingcat/telegram-phone-number-checker
 cd telegram-phone-number-checker
 pip install -r requirements.txt
-python telegram-phone-number-checker/main.py
+ls
+python3 app.py
 ```
-
 ## Requirements
 To run it, you need:
 
