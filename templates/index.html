@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram User Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        input::placeholder {
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <h1>Telegram User Checker</h1>
     <form id="checkForm">
         <label for="phone_numbers">Phone Numbers (comma-separated):</label><br>
-        <input type="text" id="phone_numbers" name="phone_numbers"><br>
+        <input type="text" id="phone_numbers" name="phone_numbers" placeholder="Enter Phone Numbers"><br>
         <label for="api_id">API ID:</label><br>
-        <input type="text" id="api_id" name="api_id"><br>
+        <input type="text" id="api_id" name="api_id" placeholder="Enter your API ID"><br>
         <label for="api_hash">API Hash:</label><br>
-        <input type="password" id="api_hash" name="api_hash"><br>
+        <input type="password" id="api_hash" name="api_hash" placeholder="Enter your API Hash"><br>
         <label for="api_phone_number">Your Telegram Phone Number:</label><br>
-        <input type="text" id="api_phone_number" name="api_phone_number"><br><br>
+        <input type="text" id="api_phone_number" name="api_phone_number" placeholder="Enter your Telegram number"><br><br>
         <button type="button" onclick="checkNumbers()">Check</button>
     </form>
     <div id="results"></div>
@@ -39,4 +48,3 @@
     </script>
 </body>
 </html>
-
